@@ -1,4 +1,5 @@
-body {
+.game-body {
+  font-family: 'Pixelify Sans', sans-serif;
   margin: 0;
   padding: 0;
   display: flex;
@@ -6,8 +7,62 @@ body {
   align-items: center;
   height: 100vh;
   background-color: rgba(0, 0, 0, 1);
+  color: white;
 
 }
+
+/* letter page */
+
+.letter-body {
+    font-family: 'Pixelify Sans', sans-serif;
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    background-color: rgba(0, 0, 0, 1);
+    color: white;
+    margin-top: 30px;
+    font-size: 1.1em;
+
+}
+
+
+#counter {
+  color: pink;
+  font-size: 1.2em;
+}
+
+#countdown {
+  color: pink;
+  font-size: 1.1em;
+  margin-top: 10px;
+}
+
+.scroll-container {
+  overflow: auto;
+  white-space: nowrap;
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center items horizontally */
+}
+
+.scroll-container .gallery {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  margin: 20px;
+}
+
+
+.scroll-container img {
+  max-width: 20%;
+  border-style: dashed;
+  border-color: white;
+  border-width: 2px;
+  border-radius: 8px;
+  margin: 20px;
+}
+
+
+/* game start */
 
 .start-screen {
     position: absolute;
@@ -44,6 +99,18 @@ body {
   cursor: pointer;
 }
 
+.secondary-link {
+  font-family: 'Pixelify Sans', sans-serif;
+  color: white;
+  font-size: 24px;
+  display: block;
+  top: 24px;
+  right:24px;
+  position: absolute;
+  text-decoration: none;
+}
+
+
 .container {
   position: relative;
   width: 80%; /* Adjust as needed */
@@ -60,37 +127,51 @@ body {
 .screen1 {
   background-image: url(images/screen1.jpg);
   background-size: contain;
+  max-height: 600px; /* Adjust as needed */
+
 
 }
 
 .screen2 {
   background-image: url(images/screen2.jpg);
   background-size: contain;
+  max-height: 600px; /* Adjust as needed */
+
 }
 
 .screen3 {
   background-image: url(images/screen3.jpg);
   background-size: cover;
+  max-height: 600px; /* Adjust as needed */
+
 }
 
 .screen4 {
   background-image: url(images/screen4.gif);
   background-size: cover;
+  max-height: 600px; /* Adjust as needed */
+
 }
 
 .screen5 {
   background-image: url(images/screen5.jpeg);
   background-size: cover;
+  max-height: 600px; /* Adjust as needed */
+
 }
 
 .screen6 {
   background-image: url(images/screen6.jpg);
   background-size: cover;
+  max-height: 600px; /* Adjust as needed */
+
 }
 
 .screen7 {
   background-image: url(images/screen7.png);
   background-size: cover;
+  max-height: 600px; /* Adjust as needed */
+
 }
 
 
@@ -123,5 +204,16 @@ body {
   position: absolute;
   bottom: 40px;
   left: 300px; /* Initial position */
+  overflow: hidden;
+}
+
+#obstacle2 {
+  width: 100px;
+  height: 100px;
+  background-image: url(images/bat.gif);
+  background-size: cover;
+  position: absolute;
+  top: 100px;
+  right: 20px; /* Initial position */
   overflow: hidden;
 }

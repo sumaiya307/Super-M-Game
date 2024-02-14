@@ -8,6 +8,7 @@ const jumpHeight = 300;
 const playerSpeed = 30;
 const jumpSpeed = 5;
 const obstacleSpeed = 7;
+const obstacle2Speed= 4;
 const totalScreens = 7; // Total screens before reaching princess
 
 let currentScreen = 1;
@@ -65,6 +66,15 @@ function moveObstacle() {
   }
 }
 
+function moveObstacle2() {
+  let obstacle2Position = parseInt(window.getComputedStyle(obstacle).getPropertyValue('left'));
+  if (obstacle2Position > -obstacle2.offsetWidth) {
+    obstacle2.style.left = `${obstacle2Position - obstacle2Speed}px`;
+  } else {
+    obstacle2.style.left = `${containerWidth}px`;
+  }
+}
+
 function checkObstacleCollision() {
   let playerLeft = parseInt(window.getComputedStyle(player).getPropertyValue('left'));
   let playerBottom = parseInt(window.getComputedStyle(player).getPropertyValue('bottom'));
@@ -116,6 +126,7 @@ function checkCollision() {
 }
 
 setInterval(moveObstacle, 20);
+setInterval(moveObstacle2, 10);
 
 document.addEventListener('keydown', function(event) {
   if (event.key === 'ArrowLeft') {
